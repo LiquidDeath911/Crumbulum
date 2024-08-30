@@ -237,7 +237,7 @@ var Crustulum = {
             if (Crustulum.OG.shimmerPrototypeInit) Game.shimmer.prototype.init = function() {
                 Game.shimmerTypes[this.type].initFunc(this);
             };
-            if (Game.hasGod) Crustulum.Liberate.hasGod();
+            //if (Game.hasGod) Crustulum.Liberate.hasGod();
             Crustulum.Liberate.miniGames();
         },
         miniGames: () => {
@@ -256,10 +256,10 @@ var Crustulum = {
                 if (Crustulum.OG.grimoireFailChance) Game.Objects['Wizard tower'].minigame.getFailChance = Crustulum.OG.grimoireFailChance;
             }
         },
-        hasGod: () => {
-            if(Game.Objects['Temple'].minigameLoaded && Game.Objects['Temple'].minigame.gods && Crustulum.OG.hasGod && Game.hasGod) Game.hasGod = Crustulum.OG.hasGod;
-            else delete Game.hasGod;
-        },
+        //hasGod: () => {
+        //    if(Game.Objects['Temple'].minigameLoaded && Game.Objects['Temple'].minigame.gods && Crustulum.OG.hasGod && Game.hasGod) Game.hasGod = Crustulum.OG.hasGod;
+        //    else delete Game.hasGod;
+        //},
     },
     Hijack: {
         Game: () => {
@@ -278,7 +278,7 @@ var Crustulum = {
                     }
                 }
             }
-            if (!Crustulum.OG.hasGod) Crustulum.Hijack.hasGod();
+            //if (!Crustulum.OG.hasGod) Crustulum.Hijack.hasGod();
         
             Crustulum.Hijack.miniGames();
         },

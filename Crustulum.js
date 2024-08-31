@@ -29,13 +29,13 @@ var Crustulum = {
                 fragment.appendChild(Crustulum.Menu.toggleButton('allGodsActive','Pantheon \'R Us','All Pantheon gods except for Cyclius will be active in slot one.'));
                 fragment.appendChild(Crustulum.Menu.toggleButton('allGodsSlotOne','Power Of The Gods','All Pantheon gods will behave as if they are in slot 1 regardless of which slot they are in.'));
                 fragment.appendChild(Crustulum.Menu.heading('Crustulum Actions'));
-                fragment.appendChild(Crustulum.Menu.subheading('Spawning'));
-                fragment.appendChild(Crustulum.Menu.actionButton('spawnGolden','Spawn a Golden Cookie','Spawns a golden cookie.', Crustulum.Actions.spawnGolden));
+                fragment.appendChild(Crustulum.Menu.subheading('Normal Spawning'));
+                fragment.appendChild(Crustulum.Menu.actionButton('spawnGolden','Spawn a Golden Cookie','Spawns a golden cookie, no type specified.', Crustulum.Actions.spawnGolden));
                 fragment.appendChild(Crustulum.Menu.actionButton('spawnGoldenFrenzy','Spawn a Frenzy Cookie','Spawns a frenzy golden cookie.', Crustulum.Actions.spawnGoldenFrenzy));
                 fragment.appendChild(Crustulum.Menu.actionButton('spawnGoldenDragonflight','Spawn a Dragonflight Cookie','Spawns a dragonflight golden cookie.', Crustulum.Actions.spawnGoldenDragonflight));
-                fragment.appendChild(Crustulum.Menu.actionButton('spawnReindeer','Spawn a reindeer','Spawns a reindeer.', Crustulum.Actions.spawnReindeer));
                 fragment.appendChild(Crustulum.Menu.actionButton('giveSugarLump','Give Sugar Lump','Gives you a sugar limp.', Crustulum.Actions.giveSugarLump));
-                fragment.appendChild(Crustulum.Menu.actionButton('giveCookies','Give Cookies','Gives you the most cookies you can have without getting the cheated cookies achievement.', Crustulum.Actions.giveCookies));
+                fragment.appendChild(Crustulum.Menu.subheading('Seasonal Spawning (The respective season must be active)'));
+                fragment.appendChild(Crustulum.Menu.actionButton('spawnReindeer','Spawn a reindeer','Christmas: Spawns a reindeer.', Crustulum.Actions.spawnReindeer));
                 fragment.appendChild(Crustulum.Menu.subheading('Mini-games'));
                 fragment.appendChild(Crustulum.Menu.actionButton('refillMagic','Refill Magic','Refill all of your Grimoire\'s magic.', Crustulum.Actions.refillMagic));
                 fragment.appendChild(Crustulum.Menu.actionButton('refillSwaps','Refill Swaps','Refill all of your Pantheon\'s swaps', Crustulum.Actions.refillSwaps));

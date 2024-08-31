@@ -31,8 +31,8 @@ var Crustulum = {
                 fragment.appendChild(Crustulum.Menu.heading('Crustulum Actions'));
                 fragment.appendChild(Crustulum.Menu.subheading('Spawning'));
                 fragment.appendChild(Crustulum.Menu.actionButton('spawnGolden','Spawn a Golden Cookie','Spawns a golden cookie.', Crustulum.Actions.spawnGolden));
-                fragment.appendChild(Crustulum.Menu.actionButton('spawnGoldenFrenzy','Spawn a Frenzy Cookie','Spawns a golden cookie that will cause a frenzy.', Crustulum.Actions.spawnGoldenFrenzy));
-                fragment.appendChild(Crustulum.Menu.actionButton('spawnGoldenDragonflight','Spawn a Dragonflight Cookie','Spawns a golden cookie that will cause a dragonflight.', Crustulum.Actions.spawnGoldenDragonflight));
+                fragment.appendChild(Crustulum.Menu.actionButton('spawnGoldenFrenzy','Spawn a Frenzy Cookie','Spawns a frency golden cookie.', Crustulum.Actions.spawnGoldenFrenzy));
+                fragment.appendChild(Crustulum.Menu.actionButton('spawnGoldenDragonflight','Spawn a Dragonflight Cookie','Spawns a dragonflight golden cookie.', Crustulum.Actions.spawnGoldenDragonflight));
                 fragment.appendChild(Crustulum.Menu.actionButton('spawnReindeer','Spawn a reindeer','Spawns a reindeer.', Crustulum.Actions.spawnReindeer));
                 fragment.appendChild(Crustulum.Menu.actionButton('giveSugarLump','Give Sugar Lump','Gives you a sugar limp.', Crustulum.Actions.giveSugarLump));
                 fragment.appendChild(Crustulum.Menu.actionButton('giveCookies','Give Cookies','Gives you the most cookies you can have without getting the cheated cookies achievement.', Crustulum.Actions.giveCookies));

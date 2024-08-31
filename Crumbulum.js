@@ -219,6 +219,7 @@ var Crumbulum = {
         },
         section: (text) => {
             let section = document.createElement('div');
+            section.className = 'title';
             section.textContent = text
             return section;
         },

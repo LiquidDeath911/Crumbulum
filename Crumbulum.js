@@ -12,24 +12,11 @@ var Crumbulum = {
                 let fragment = document.createDocumentFragment();
                 fragment.appendChild(Crumbulum.Menu.heading('Crumbulum Options'));
                 // Toggles
-                let toggleSection = Crumbulum.Menu.section("Toggles +");
+                let toggleSection = Crumbulum.Menu.section('toggles','Toggles');
                 toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
                 toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
                 toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
-                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoNews','Auto Click News','Clicks on the fortune cookies in the news ticker for you.'));
-                toggleSection.addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var content = this.children;
-                    content.forEach((item) => {
-                        if (item.style.display === "block") {
-                            item.style.display = "none";
-                            toggleSection.textContent = "Toggles +";
-                        } else {
-                            item.style.display = "block";
-                            toggleSection.textContent = "Toggles -";
-                        }
-                    })
-                });
+                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoNews','Auto Click News','Clicks on the news ticker for you.'));
                 fragment.appendChild(toggleSection);
                 fragment.appendChild(Crumbulum.Menu.subheading('Auto Clickers'));
                 fragment.appendChild(Crumbulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
@@ -154,6 +141,7 @@ var Crumbulum = {
         },
     },
     ConfigDefaults: { // The default value for the configs
+        'toggles': false,
         'autoClicker': false,
         'autoGolden': false,
         'autoReindeer': false,
@@ -183,10 +171,20 @@ var Crumbulum = {
     },
     cookieMonsterLoaded: false,
     Menu: {
+        section: (configParam, text) => {
+            let div = document.createElement('div'), a = document.createElement('a');
+            if (!Crumbulum.getConfig(configParam)) a.className = 'option off';
+            else a.className = 'option on';
+            a.id = `Crumbulum-${configParam}`;
+            a.onclick = ()=>Crumbulum.toggleSection(configParam);
+            a.textContent = text;
+            div.appendChild(a);
+            return div;
+        },
         toggleButton: (configParam, text, description) => {
             let div = document.createElement('div'), a = document.createElement('a'), label = document.createElement('label');
             if (!Crumbulum.getConfig(configParam)) a.className = 'option off';
-            else a.className = 'option';
+            else a.className = 'option on';
             a.id = `Crumbulum-${configParam}`;
             a.onclick = ()=>Crumbulum.toggleConfig(configParam);
             a.textContent = text;
@@ -198,7 +196,7 @@ var Crumbulum = {
         },
         actionButton: (configParam, text, description, action) => {
             let div = document.createElement('div'), a = document.createElement('a'), label = document.createElement('label');
-            a.className = 'option';
+            a.className = 'option on';
             a.id = `Crumbulum-${configParam}`;
             a.onclick = action;
             a.textContent = text;
@@ -218,11 +216,6 @@ var Crumbulum = {
             let subheading = Crumbulum.Menu.heading(text);
             subheading.style.fontSize = '17px';
             return subheading;
-        },
-        section: (text) => {
-            let section = Crumbulum.Menu.heading(text);
-            section.style.fontSize = '17px';
-            return section;
         },
     },
     saveConfig: () => {
@@ -254,11 +247,22 @@ var Crumbulum = {
         Crumbulum.updateMenuView(configParam);
         return val;
     },
+    toggleSection: (configParam) => {
+        let element = document.getElementById(`Crumbulum-${configParam}`);
+        for(let item of element.children) {
+            if (item.style.display == "block") {
+                item.style.display == "none";
+            } else {
+                item.style.display == "block";
+            }
+        }
+        return val;
+    },
     updateMenuView: (configParam) => {
         if (!Crumbulum.getConfig(configParam))
             l(`Crumbulum-${configParam}`).className = 'option off';
         else
-            l(`Crumbulum-${configParam}`).className = 'option';
+            l(`Crumbulum-${configParam}`).className = 'option on';
     },
     Liberate: {
         Game: () => {

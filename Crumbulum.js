@@ -12,6 +12,11 @@ var Crumbulum = {
                 let fragment = document.createDocumentFragment();
                 fragment.appendChild(Crumbulum.Menu.heading('Crumbulum Options'));
                 // Toggles
+                let toggleSectionBody = document.createDocumentFragment();
+                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
+                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
+                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
+                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoNews','Auto Click News','Clicks on the fortune cookies in the news ticker for you.'));
                 let toggleSection = Crumbulum.Menu.section("Toggles");
                 toggleSection.addEventListener("click", function() {
                     this.classList.toggle("active");
@@ -22,11 +27,6 @@ var Crumbulum = {
                         content.style.display = "block";
                     }
                 });
-                let toggleSectionBody = document.createDocumentFragment();
-                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
-                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
-                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
-                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoNews','Auto Click News','Clicks on the fortune cookies in the news ticker for you.'));
                 fragment.appendChild(toggleSection);
                 fragment.appendChild(toggleSectionBody);
                 fragment.appendChild(Crumbulum.Menu.subheading('Auto Clickers'));

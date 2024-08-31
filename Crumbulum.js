@@ -12,23 +12,23 @@ var Crumbulum = {
                 let fragment = document.createDocumentFragment();
                 fragment.appendChild(Crumbulum.Menu.heading('Crumbulum Options'));
                 // Toggles
-                let toggleSectionBody = document.createDocumentFragment();
-                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
-                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
-                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
-                toggleSectionBody.appendChild(Crumbulum.Menu.toggleButton('autoNews','Auto Click News','Clicks on the fortune cookies in the news ticker for you.'));
-                let toggleSection = Crumbulum.Menu.section("Toggles");
+                let toggleSection = Crumbulum.Menu.section("Toggles +");
+                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
+                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
+                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
+                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoNews','Auto Click News','Clicks on the fortune cookies in the news ticker for you.'));
                 toggleSection.addEventListener("click", function() {
                     this.classList.toggle("active");
-                    var content = this.nextElementSibling;
+                    var content = this.children;
                     if (content.style.display === "block") {
                         content.style.display = "none";
+                        this.textContent = "Toggles +";
                     } else {
                         content.style.display = "block";
+                        this.textContent = "Toggles -";
                     }
                 });
                 fragment.appendChild(toggleSection);
-                fragment.appendChild(toggleSectionBody);
                 fragment.appendChild(Crumbulum.Menu.subheading('Auto Clickers'));
                 fragment.appendChild(Crumbulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
                 fragment.appendChild(Crumbulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));

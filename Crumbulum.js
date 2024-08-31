@@ -218,9 +218,8 @@ var Crumbulum = {
             return subheading;
         },
         section: (text) => {
-            let section = document.createElement('div');
-            section.className = 'title';
-            section.textContent = text
+            let section = Crumbulum.Menu.heading(text);
+            section.style.fontSize = '17px';
             return section;
         },
     },

@@ -20,13 +20,15 @@ var Crumbulum = {
                 toggleSection.addEventListener("click", function() {
                     this.classList.toggle("active");
                     var content = this.children;
-                    if (content.style.display === "block") {
-                        content.style.display = "none";
-                        this.textContent = "Toggles +";
-                    } else {
-                        content.style.display = "block";
-                        this.textContent = "Toggles -";
-                    }
+                    content.forEach((item) => {
+                        if (item.style.display === "block") {
+                            item.style.display = "none";
+                            toggleSection.textContent = "Toggles +";
+                        } else {
+                            item.style.display = "block";
+                            toggleSection.textContent = "Toggles -";
+                        }
+                    })
                 });
                 fragment.appendChild(toggleSection);
                 fragment.appendChild(Crumbulum.Menu.subheading('Auto Clickers'));

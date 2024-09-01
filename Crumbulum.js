@@ -13,45 +13,45 @@ var Crumbulum = {
                 fragment.appendChild(Crumbulum.Menu.heading('Crumbulum Options'));
                 // Toggles
                 let toggleSection = Crumbulum.Menu.section('toggles','Toggles');
-                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
-                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
-                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
-                toggleSection.appendChild(Crumbulum.Menu.toggleButton('autoNews','Auto Click News','Clicks on the news ticker for you.'));
+                toggleSection.appendChild(Crumbulum.Menu.toggleButton('toggles','autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
+                toggleSection.appendChild(Crumbulum.Menu.toggleButton('toggles','autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
+                toggleSection.appendChild(Crumbulum.Menu.toggleButton('toggles','autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
+                toggleSection.appendChild(Crumbulum.Menu.toggleButton('toggles','autoNews','Auto Click News','Clicks on the news ticker for you.'));
                 fragment.appendChild(toggleSection);
                 fragment.appendChild(Crumbulum.Menu.subheading('Auto Clickers'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('autoNews','Auto Click News','Clicks on the news ticker for you.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','autoNews','Auto Click News','Clicks on the news ticker for you.'));
                 fragment.appendChild(Crumbulum.Menu.subheading('Golden Cookies'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('blockWrath','Block Wrath Cookies','Prevents wrath cookies from spawning.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','blockWrath','Block Wrath Cookies','Prevents wrath cookies from spawning.'));
                 fragment.appendChild(Crumbulum.Menu.subheading('Infinite Stuff'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('infiniteCookies','Infinite Cookies','Causes your cookies to constantly regenerate.'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('infiniteMagic','Infinite Magic','Causes your Grimoire magic to recharge almost instantly'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('infiniteSwaps','Infinite Swaps','Causes your Pantheon swaps to regenerate almost instantly.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','infiniteCookies','Infinite Cookies','Causes your cookies to constantly regenerate.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','infiniteMagic','Infinite Magic','Causes your Grimoire magic to recharge almost instantly'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','infiniteSwaps','Infinite Swaps','Causes your Pantheon swaps to regenerate almost instantly.'));
                 fragment.appendChild(Crumbulum.Menu.subheading('Mini-game Enhancers'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('miracleSpells','Miracle Spell™','Grimoire spells will never fail.'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('immortalPlants','Make Plants Immortal','Makes it so plants never wither. Does not affect weeds or fungi.'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('neverWeeds','Never Weed™','Makes it so weeds never spawn on their own. You can still plant them and they still may spread.'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('allGodsActive','Pantheon \'R Us','All Pantheon gods except for Cyclius will be active in slot one.'));
-                fragment.appendChild(Crumbulum.Menu.toggleButton('allGodsSlotOne','Power Of The Gods','All Pantheon gods will behave as if they are in slot 1 regardless of which slot they are in.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','miracleSpells','Miracle Spell™','Grimoire spells will never fail.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','immortalPlants','Make Plants Immortal','Makes it so plants never wither. Does not affect weeds or fungi.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','neverWeeds','Never Weed™','Makes it so weeds never spawn on their own. You can still plant them and they still may spread.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','allGodsActive','Pantheon \'R Us','All Pantheon gods except for Cyclius will be active in slot one.'));
+                fragment.appendChild(Crumbulum.Menu.toggleButton('1','allGodsSlotOne','Power Of The Gods','All Pantheon gods will behave as if they are in slot 1 regardless of which slot they are in.'));
                 fragment.appendChild(Crumbulum.Menu.heading('Crumbulum Actions'));
                 fragment.appendChild(Crumbulum.Menu.subheading('Normal Spawning'));
-                fragment.appendChild(Crumbulum.Menu.actionButton('spawnGolden','Spawn a Golden Cookie','Spawns a golden cookie, no type specified.', Crumbulum.Actions.spawnGolden));
-                fragment.appendChild(Crumbulum.Menu.actionButton('spawnGoldenFrenzy','Spawn a Frenzy Cookie','Spawns a frenzy golden cookie.', Crumbulum.Actions.spawnGoldenFrenzy));
-                fragment.appendChild(Crumbulum.Menu.actionButton('spawnGoldenDragonflight','Spawn a Dragonflight Cookie','Spawns a dragonflight golden cookie.', Crumbulum.Actions.spawnGoldenDragonflight));
-                fragment.appendChild(Crumbulum.Menu.actionButton('giveSugarLump','Give Sugar Lump','Gives you a sugar limp.', Crumbulum.Actions.giveSugarLump));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','spawnGolden','Spawn a Golden Cookie','Spawns a golden cookie, no type specified.', Crumbulum.Actions.spawnGolden));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','spawnGoldenFrenzy','Spawn a Frenzy Cookie','Spawns a frenzy golden cookie.', Crumbulum.Actions.spawnGoldenFrenzy));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','spawnGoldenDragonflight','Spawn a Dragonflight Cookie','Spawns a dragonflight golden cookie.', Crumbulum.Actions.spawnGoldenDragonflight));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','giveSugarLump','Give Sugar Lump','Gives you a sugar limp.', Crumbulum.Actions.giveSugarLump));
                 fragment.appendChild(Crumbulum.Menu.subheading('Seasonal Spawning (The respective season must be active)'));
-                fragment.appendChild(Crumbulum.Menu.actionButton('spawnReindeer','Spawn a reindeer','Christmas: Spawns a reindeer.', Crumbulum.Actions.spawnReindeer));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','spawnReindeer','Spawn a reindeer','Christmas: Spawns a reindeer.', Crumbulum.Actions.spawnReindeer));
                 fragment.appendChild(Crumbulum.Menu.subheading('Mini-games'));
-                fragment.appendChild(Crumbulum.Menu.actionButton('refillMagic','Refill Magic','Refill all of your Grimoire\'s magic.', Crumbulum.Actions.refillMagic));
-                fragment.appendChild(Crumbulum.Menu.actionButton('refillSwaps','Refill Swaps','Refill all of your Pantheon\'s swaps', Crumbulum.Actions.refillSwaps));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','refillMagic','Refill Magic','Refill all of your Grimoire\'s magic.', Crumbulum.Actions.refillMagic));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','refillSwaps','Refill Swaps','Refill all of your Pantheon\'s swaps', Crumbulum.Actions.refillSwaps));
                 fragment.appendChild(Crumbulum.Menu.subheading('Unlock Things'));
-                fragment.appendChild(Crumbulum.Menu.actionButton('unlockAllSeeds','Unlock Plant Seeds','Unlocks all the plant seeds for your Garden. Does not unlock weeds or fungi.', Crumbulum.Actions.unlockAllSeeds));
-                fragment.appendChild(Crumbulum.Menu.actionButton('unlockAllWeedFungusSeeds','Unlock Weed and Fungi Seeds','Unlocks all the weed and fungus seeds for the Garden.', Crumbulum.Actions.unlockAllWeedFungusSeeds));
-                fragment.appendChild(Crumbulum.Menu.actionButton('lockAllSeeds','Lock All Seeds','Locks all the seeds for the Garden except for the starting seed.', Crumbulum.Actions.lockAllSeeds));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','unlockAllSeeds','Unlock Plant Seeds','Unlocks all the plant seeds for your Garden. Does not unlock weeds or fungi.', Crumbulum.Actions.unlockAllSeeds));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','unlockAllWeedFungusSeeds','Unlock Weed and Fungi Seeds','Unlocks all the weed and fungus seeds for the Garden.', Crumbulum.Actions.unlockAllWeedFungusSeeds));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','lockAllSeeds','Lock All Seeds','Locks all the seeds for the Garden except for the starting seed.', Crumbulum.Actions.lockAllSeeds));
                 fragment.appendChild(Crumbulum.Menu.subheading('Misc'));
-                fragment.appendChild(Crumbulum.Menu.actionButton('removeCheatedCookies','Remove Cheat Achievement','Remove \'Cheated cookies taste awful\' achievement', Crumbulum.Actions.removeCheatedCookies));
+                fragment.appendChild(Crumbulum.Menu.actionButton('1','removeCheatedCookies','Remove Cheat Achievement','Remove \'Cheated cookies taste awful\' achievement', Crumbulum.Actions.removeCheatedCookies));
 
                 // Unload Crumbulum button. Doesn't work if you loaded other add-ons first. We check only for Cookie Monster.
                 if (typeof CM === 'undefined' || Crumbulum.cookieMonsterLoaded) fragment.appendChild(Crumbulum.Menu.actionButton('unloadCrumbulum','Unload Crumbulum','Unloads Crumbulum and disabled all of it\'s features.', Crumbulum.Actions.unloadCrumbulum));
@@ -174,18 +174,19 @@ var Crumbulum = {
         section: (configParam, text) => {
             let div = document.createElement('div'), a = document.createElement('a');
             if (!Crumbulum.getConfig(configParam)) a.className = 'option off';
-            else a.className = 'option on';
+            else a.className = 'option';
             a.id = `Crumbulum-${configParam}`;
             a.onclick = ()=>Crumbulum.toggleSection(configParam);
             a.textContent = text;
             div.appendChild(a);
             return div;
         },
-        toggleButton: (configParam, text, description) => {
+        toggleButton: (section, configParam, text, description) => {
             let div = document.createElement('div'), a = document.createElement('a'), label = document.createElement('label');
             if (!Crumbulum.getConfig(configParam)) a.className = 'option off';
-            else a.className = 'option on';
+            else a.className = 'option';
             a.id = `Crumbulum-${configParam}`;
+            a.tagName =  `Crumbulum-${section}`;
             a.onclick = ()=>Crumbulum.toggleConfig(configParam);
             a.textContent = text;
             label.textContent = description;
@@ -194,10 +195,11 @@ var Crumbulum = {
             div.appendChild(label);
             return div;
         },
-        actionButton: (configParam, text, description, action) => {
+        actionButton: (section, configParam, text, description, action) => {
             let div = document.createElement('div'), a = document.createElement('a'), label = document.createElement('label');
-            a.className = 'option on';
+            a.className = 'option';
             a.id = `Crumbulum-${configParam}`;
+            a.tagName =  `Crumbulum-${section}`;
             a.onclick = action;
             a.textContent = text;
             label.textContent = description;
@@ -248,21 +250,21 @@ var Crumbulum = {
         return val;
     },
     toggleSection: (configParam) => {
-        let element = document.getElementById(`Crumbulum-${configParam}`);
-        for(let item of element.children) {
+        let elements = document.getElementsByTagName(`Crumbulum-${configParam}`);
+        for(let item of elements) {
             if (item.style.display == "block") {
                 item.style.display == "none";
             } else {
                 item.style.display == "block";
             }
         }
-        return val;
+        return element;
     },
     updateMenuView: (configParam) => {
         if (!Crumbulum.getConfig(configParam))
             l(`Crumbulum-${configParam}`).className = 'option off';
         else
-            l(`Crumbulum-${configParam}`).className = 'option on';
+            l(`Crumbulum-${configParam}`).className = 'option';
     },
     Liberate: {
         Game: () => {
